@@ -1,0 +1,5 @@
+build/
+dist/
+venv/
+.idea/
+tracardi_plugin_sdk.egg-info/
