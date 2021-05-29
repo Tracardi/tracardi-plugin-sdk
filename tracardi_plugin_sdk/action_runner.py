@@ -1,3 +1,3 @@
-class PluginRunner:
+class ActionRunner:
     async def run(self, **kwargs):
         pass
