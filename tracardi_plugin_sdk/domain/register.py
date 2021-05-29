@@ -19,6 +19,6 @@ class MetaData(BaseModel):
     icon: str
 
 
-class Task(BaseModel):
-    task: Spec
+class Plugin(BaseModel):
+    spec: Spec
     metadata: MetaData
