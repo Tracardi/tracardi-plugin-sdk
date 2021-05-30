@@ -5,8 +5,8 @@ from pydantic import BaseModel
 class Spec(BaseModel):
     className: str
     module: str
-    inputs: List[str]
-    outputs: List[str]
+    inputs: Optional[List[str]] = []
+    outputs: Optional[List[str]] = []
     init: Optional[dict] = {}
 
 
