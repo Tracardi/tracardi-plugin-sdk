@@ -21,5 +21,6 @@ class MetaData(BaseModel):
 
 class Plugin(BaseModel):
     start: bool = False
+    debug: bool = False
     spec: Spec
     metadata: MetaData
