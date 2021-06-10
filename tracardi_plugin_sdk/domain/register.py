@@ -8,6 +8,7 @@ class Spec(BaseModel):
     inputs: Optional[List[str]] = []
     outputs: Optional[List[str]] = []
     init: Optional[dict] = {}
+    manual: Optional[str] = None
 
 
 class MetaData(BaseModel):
