@@ -1,7 +1,7 @@
 class ActionRunner:
 
     debug = False
-    original_payload = None
+    event = None
     session = None
     profile = None
 
