@@ -6,6 +6,7 @@ class ActionRunner:
     profile = None
     flow = None
     flow_history = None
+    dot = None
 
     async def run(self, **kwargs):
         pass
