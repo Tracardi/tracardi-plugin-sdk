@@ -18,7 +18,7 @@ class MetaData(BaseModel):
     width: int
     height: int
     icon: str
-    group: Optional[str] = "General"
+    group: Optional[List[str]] = ["General"]
 
 
 class Plugin(BaseModel):
