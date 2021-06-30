@@ -7,7 +7,7 @@ class Spec(BaseModel):
     module: str
     inputs: Optional[List[str]] = []
     outputs: Optional[List[str]] = []
-    init: Optional[dict] = {}
+    init: Optional[dict] = None
     manual: Optional[str] = None
 
 
