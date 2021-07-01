@@ -18,6 +18,7 @@ class MetaData(BaseModel):
     width: int
     height: int
     icon: str
+    editor: str = 'json'
     group: Optional[List[str]] = ["General"]
 
 
