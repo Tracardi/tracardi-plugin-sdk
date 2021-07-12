@@ -1,5 +1,5 @@
 class ActionRunner:
-
+    id = None
     debug = False
     event = None
     session = None
