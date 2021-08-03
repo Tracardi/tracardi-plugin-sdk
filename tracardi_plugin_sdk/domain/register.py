@@ -9,11 +9,15 @@ class Spec(BaseModel):
     outputs: Optional[List[str]] = []
     init: Optional[dict] = None
     manual: Optional[str] = None
+    author: Optional[str] = None
+    license: Optional[str] = "MIT"
+    version: Optional[str] = '0.0.1'
 
 
 class MetaData(BaseModel):
     name: str
     desc: Optional[str] = ""
+    keywords: Optional[List[str]] = []
     type: str
     width: int
     height: int
