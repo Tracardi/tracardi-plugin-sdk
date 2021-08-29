@@ -1,7 +1,6 @@
-pip install wheel
 python setup.py bdist_wheel
-pip install twine
 python -m twine upload dist/*
 
+rm -rf build
+rm -rf dist
 
-# if error pip install keyring==21.4.0
