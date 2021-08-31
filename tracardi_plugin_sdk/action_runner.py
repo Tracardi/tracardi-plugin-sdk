@@ -10,3 +10,6 @@ class ActionRunner:
 
     async def run(self, **kwargs):
         pass
+
+    async def close(self):
+        pass
