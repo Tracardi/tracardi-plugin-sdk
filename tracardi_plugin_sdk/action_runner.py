@@ -13,3 +13,6 @@ class ActionRunner:
 
     async def close(self):
         pass
+
+    async def on_error(self):
+        pass
