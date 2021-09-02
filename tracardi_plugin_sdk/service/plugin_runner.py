@@ -1,8 +1,10 @@
 import asyncio
+from typing import Type
+
 from tracardi_plugin_sdk.action_runner import ActionRunner
 
 
-def run_plugin(plugin: ActionRunner, init, payload):
+def run_plugin(plugin: Type[ActionRunner], init, payload):
     async def main(plugin, init, payload):
         try:
 
