@@ -1,5 +1,5 @@
 from tracardi_plugin_sdk.action_runner import ActionRunner
-from tracardi_plugin_sdk.service.pluggin_runner import run_plugin
+from tracardi_plugin_sdk.service.plugin_runner import run_plugin
 
 
 class x(ActionRunner):
