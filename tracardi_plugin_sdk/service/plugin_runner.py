@@ -24,4 +24,4 @@ def run_plugin(plugin: Type[ActionRunner], init, payload):
             if isinstance(plugin, ActionRunner):
                 await plugin.close()
 
-    asyncio.run(main(plugin, init, payload))
+    return asyncio.run(main(plugin, init, payload))
