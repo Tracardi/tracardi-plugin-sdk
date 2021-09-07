@@ -14,9 +14,11 @@ class x(ActionRunner):
 
     async def run(self, payload):
         print('run', payload)
+        return 1
 
     async def close(self):
         print('close')
 
 
-run_plugin(x, {"init": 1}, {"payload": 2})
+result = run_plugin(x, {"init": 1}, {"payload": 2})
+print(result)
