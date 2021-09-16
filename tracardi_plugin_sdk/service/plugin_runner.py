@@ -1,18 +1,22 @@
 import asyncio
 from typing import Type
+from uuid import uuid4
 
 from tracardi_plugin_sdk.action_runner import ActionRunner
+from tracardi_plugin_sdk.domain.console import Console
 
 
 class PluginTestResult:
-    def __init__(self, output, profile=None, session=None, event=None):
+    def __init__(self, output, profile=None, session=None, event=None, console=None):
         self.event = event
         self.session = session
         self.profile = profile
         self.output = output
+        self.console = console
 
     def __repr__(self):
-        return f"output=`{self.output}`\nprofile=`{self.profile}`\nsession=`{self.session}`\nevent=`{self.session}`"
+        return f"output=`{self.output}`\nprofile=`{self.profile}`\nsession=`{self.session}`\nevent=`{self.session}`" \
+               f"\nconsole=`{self.console}`"
 
 
 def run_plugin(plugin: Type[ActionRunner], init, payload, profile=None, session=None, event=None) -> PluginTestResult:
@@ -26,9 +30,13 @@ def run_plugin(plugin: Type[ActionRunner], init, payload, profile=None, session=
             else:
                 plugin = plugin(**init)
 
+            console = Console("Test", "test")
+
+            plugin.id = str(uuid4())
             plugin.profile = profile
             plugin.session = session
             plugin.event = event
+            plugin.console = console
 
             output = await plugin.run(payload)
 
@@ -36,7 +44,8 @@ def run_plugin(plugin: Type[ActionRunner], init, payload, profile=None, session=
                 output,
                 profile,
                 session,
-                event
+                event,
+                console
             )
 
         except Exception as e:
