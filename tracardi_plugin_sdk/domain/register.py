@@ -20,7 +20,7 @@ class FormFields(BaseModel):
     validation: Optional[FieldValidation]
 
 
-class FormGroups(BaseModel):
+class FormGroup(BaseModel):
     name: Optional[str]
     description: Optional[str]
     fields: List[FormFields]
@@ -28,7 +28,7 @@ class FormGroups(BaseModel):
 
 class Form(BaseModel):
     title: str
-    groups: List[FormGroups]
+    groups: List[FormGroup]
 
 
 class Spec(BaseModel):
