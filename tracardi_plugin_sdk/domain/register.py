@@ -2,28 +2,28 @@ from typing import List, Optional
 from pydantic import BaseModel
 
 
-class FieldValidation(BaseModel):
+class FormFieldValidation(BaseModel):
     regex: str
     message: str
 
 
-class Component(BaseModel):
+class FormComponent(BaseModel):
     type: str = 'text'
     props: Optional[dict] = {}
 
 
-class FormFields(BaseModel):
+class FormField(BaseModel):
     id: str
     name: str
     description: Optional[str]
-    component: Component
-    validation: Optional[FieldValidation]
+    component: FormComponent
+    validation: Optional[FormFieldValidation]
 
 
 class FormGroup(BaseModel):
     name: Optional[str]
     description: Optional[str]
-    fields: List[FormFields]
+    fields: List[FormField]
 
 
 class Form(BaseModel):
