@@ -27,7 +27,7 @@ class FormGroup(BaseModel):
 
 
 class Form(BaseModel):
-    title: str
+    title: Optional[str]
     groups: List[FormGroup]
 
 
