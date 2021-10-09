@@ -18,6 +18,7 @@ class FormField(BaseModel):
     description: Optional[str]
     component: FormComponent
     validation: Optional[FormFieldValidation]
+    required: bool = False
 
 
 class FormGroup(BaseModel):
