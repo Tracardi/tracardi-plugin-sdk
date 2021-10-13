@@ -34,7 +34,7 @@ class Form(BaseModel):
 
 
 class Spec(BaseModel):
-    id: str
+    id: Optional[str]
     className: str
     module: str
     inputs: Optional[List[str]] = []
@@ -47,8 +47,8 @@ class Spec(BaseModel):
     version: Optional[str] = '0.0.1'
 
     def __init__(self, **data: Any):
-        self.id = self.get_id()
         super().__init__(**data)
+        self.id = self.get_id()
 
     def get_id(self) -> str:
         action_id = self.module + self.className
