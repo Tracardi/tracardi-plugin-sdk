@@ -1,3 +1,4 @@
+import hashlib
 from typing import List, Optional
 from pydantic import BaseModel
 
@@ -43,6 +44,10 @@ class Spec(BaseModel):
     author: Optional[str] = None
     license: Optional[str] = "MIT"
     version: Optional[str] = '0.0.1'
+
+    def get_id(self) -> str:
+        action_id = self.module + self.className
+        return hashlib.md5(action_id.encode()).hexdigest()
 
 
 class MetaData(BaseModel):
