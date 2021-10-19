@@ -1,2 +1,4 @@
 pydantic
 tracardi_dot_notation>=0.6.4
+
+twine
