@@ -1,3 +1,6 @@
+from tracardi_dot_notation.dot_accessor import DotAccessor
+
+
 class ActionRunner:
     id = None
     debug = False
@@ -16,3 +19,7 @@ class ActionRunner:
 
     async def on_error(self):
         pass
+
+    def _get_dot_accessor(self, payload) -> DotAccessor:
+        return DotAccessor(self.profile, self.session, payload, self.event, self.flow)
+
