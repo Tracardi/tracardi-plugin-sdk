@@ -40,6 +40,8 @@ class Spec(BaseModel):
     inputs: Optional[List[str]] = []
     outputs: Optional[List[str]] = []
     init: Optional[dict] = None
+    onErrorContinue: bool = False
+    onErrorRepeat: int = 1
     form: Optional[Form]
     manual: Optional[str] = None
     author: Optional[str] = None

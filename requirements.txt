@@ -1,4 +1,4 @@
 pydantic
-tracardi_dot_notation>=0.6.4
+tracardi_dot_notation>=0.6.5
 
 twine
