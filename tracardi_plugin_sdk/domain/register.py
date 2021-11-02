@@ -25,7 +25,10 @@ class FormField(BaseModel):
 class FormGroup(BaseModel):
     name: Optional[str]
     description: Optional[str]
-    fields: List[FormField]
+    field_value: List[FormField]
+
+    class Config:
+        fields = {'field_value': 'fields'}
 
 
 class Form(BaseModel):
