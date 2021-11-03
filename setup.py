@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='tracardi_plugin_sdk',
-    version='0.6.23',
+    version='0.6.24',
     description='Tracardi Plugin SDK',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -13,7 +13,7 @@ setup(
     author_email='risto.kowaczewski@gmail.com',
     packages=['tracardi_plugin_sdk'],
     install_requires=[
-        'pydantic',
+        'pydantic>=1.8.2',
         'tracardi_dot_notation>=0.6.5'
     ],
     classifiers=[
