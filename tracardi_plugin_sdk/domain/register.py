@@ -53,7 +53,7 @@ class Spec(BaseModel):
         self.id = self.get_id()
 
     def get_id(self) -> str:
-        action_id = self.module + self.className
+        action_id = self.module + self.className + self.version
         return hashlib.md5(action_id.encode()).hexdigest()
 
 
