@@ -68,6 +68,7 @@ class MetaData(BaseModel):
     editor: str = 'json'
     group: Optional[List[str]] = ["General"]
     tags: List[str] = []
+    pro: bool = False
 
 
 class Plugin(BaseModel):
