@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='tracardi_plugin_sdk',
-    version='0.6.26',
+    version='0.6.27',
     description='Tracardi Plugin SDK',
     long_description=long_description,
     long_description_content_type="text/markdown",

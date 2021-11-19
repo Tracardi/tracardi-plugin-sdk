@@ -10,6 +10,7 @@ class ActionRunner:
     flow = None
     flow_history = None
     console = None
+    node = None
 
     async def run(self, **kwargs):
         pass
