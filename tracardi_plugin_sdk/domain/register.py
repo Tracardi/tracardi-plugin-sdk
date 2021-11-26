@@ -1,6 +1,6 @@
 import hashlib
-from typing import List, Optional, Any
-from pydantic import BaseModel
+from typing import List, Optional, Any, Dict
+from pydantic import BaseModel, AnyHttpUrl
 
 
 class FormFieldValidation(BaseModel):
@@ -57,6 +57,16 @@ class Spec(BaseModel):
         return hashlib.md5(action_id.encode()).hexdigest()
 
 
+class PortDoc(BaseModel):
+    desc: str
+
+
+class Documentation(BaseModel):
+    tutorial: Optional[str]
+    inputs: Dict[str, PortDoc]
+    outputs: Dict[str, PortDoc]
+
+
 class MetaData(BaseModel):
     name: str
     desc: Optional[str] = ""
@@ -65,7 +75,7 @@ class MetaData(BaseModel):
     width: int
     height: int
     icon: str
-    editor: str = 'json'
+    documentation: Optional[Documentation] = None
     group: Optional[List[str]] = ["General"]
     tags: List[str] = []
     pro: bool = False
