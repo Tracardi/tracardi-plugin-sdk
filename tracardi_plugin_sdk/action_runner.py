@@ -3,7 +3,7 @@ from tracardi_dot_notation.dot_accessor import DotAccessor
 
 class ActionRunner:
     id = None
-    debug = False
+    debug = True
     event = None
     session = None
     profile = None
