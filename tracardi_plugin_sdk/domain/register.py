@@ -71,10 +71,10 @@ class MetaData(BaseModel):
     name: str
     desc: Optional[str] = ""
     keywords: Optional[List[str]] = []
-    type: str
-    width: int
-    height: int
-    icon: str
+    type: str = 'flowNode'
+    width: int = 300
+    height: int = 100
+    icon: str = 'plugin'
     documentation: Optional[Documentation] = None
     group: Optional[List[str]] = ["General"]
     tags: List[str] = []
