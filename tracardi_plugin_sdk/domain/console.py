@@ -3,11 +3,16 @@ from typing import Tuple
 
 class Log:
 
-    def __init__(self, module, class_name, type, message):
+    def __init__(self, module, class_name, type, message, traceback=None):
+
+        if traceback is None:
+            traceback = []
+
         self.message = message
         self.type = type
         self.class_name = class_name
         self.module = module
+        self.traceback = traceback
 
     def __repr__(self):
         return f"class: {self.class_name}, module: {self.module}, type: {self.type}, message: {self.message}"
