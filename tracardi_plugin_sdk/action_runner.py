@@ -26,3 +26,4 @@ class ActionRunner:
     def _get_dot_accessor(self, payload) -> DotAccessor:
         return DotAccessor(self.profile, self.session, payload, self.event, self.flow)
 
+
