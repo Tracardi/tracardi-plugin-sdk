@@ -13,6 +13,7 @@ class ActionRunner:
     node = None
     metrics = None
     execution_graph = None
+    ux = None
 
     async def run(self, **kwargs):
         pass
